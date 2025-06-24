@@ -1,22 +1,165 @@
-# NgxToast
+# ngx-toastr-notifier
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+![success](/documentaion-assets/success2.png)
 
-## Code scaffolding
+------
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+> **Notice:**
+> This library requires **@angular/material version 20.x** as a dependency.
+> Please ensure that you have it installed in your project before using this library.
+>
+> By utilizing Angular Material, we enhance maintainability and ensure better compatibility with future releases, particularly when relying on components like SnackBar.
+
+
+
+## Compatibility with Angular Versions
+
+Latest version available for each version of Angular
+
+| ngx-toastr-notifier | Angular |
+| ------------------- | ------- |
+| current             | >= 20.x |
+
+## Install
+
+Use npm:
 
 ```bash
-ng generate component component-name
+npm install ngx-toastr-notifier
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+using pnpm
 
 ```bash
-ng generate --help
+pnpm add ngx-toastr-notifier
 ```
 
-## Building
+## Usage
+
+Toastr usage is very simple, by default it comes with four types of notification messages:
+
+**Success:**
+
+```typescript
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({...})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
+}
+```
+
+![success](/documentaion-assets/success2.png)
+
+
+
+**Info:**
+
+```typescript
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({...})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showSuccess() {
+    this.toastr.info('Hello world!', 'Toastr fun!');
+  }
+}
+```
+
+![success](/documentaion-assets/info.png)
+
+
+
+**Error:**
+
+```typescript
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({...})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showSuccess() {
+    this.toastr.error('Hello world!', 'Toastr fun!');
+  }
+}
+```
+
+![success](/documentaion-assets/error.png)
+
+
+
+**Warning:**
+
+```typescript
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({...})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showSuccess() {
+    this.toastr.warning('Hello world!', 'Toastr fun!');
+  }
+}
+```
+
+![success](/documentaion-assets/warning.png)
+
+
+
+## Options
+
+| Option             | Type                          | Default | Description                                                  |
+| ------------------ | ----------------------------- | ------- | ------------------------------------------------------------ |
+| duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
+| showClose          | boolean                       | true    | The close button to be appeared or not                       |
+| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
+| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                   |
+| Direction          | Direction                     | rtl     | Text layout direction for the toastr                         |
+
+
+
+## Example of Usage with Options
+
+use it to display a toast with a custom duration, `showClose` set to `false`, and horizontal position set to `left`.
+
+```typescript
+import { Component } from '@angular/core';
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({
+  selector: 'app-demo',
+  template: `<button (click)="showToast()">Show Toast</button>`
+})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showToast() {
+    this.toastr.success('This is a toast message!', 'Toast' {
+      duration: 5000,           // Duration in milliseconds
+      showClose: false,         // Hide the close button
+      horizontalPosition: 'center' // Position toast to the left
+    });
+  }
+}
+```
+
+![success](/documentaion-assets/success.png)
+
+## License
+
+`ngx-toastr-notifier` is available under the MIT license. See the [LICENSE](https://www.npmjs.com/package/ngx-toastr-notifier) file for more info.
+
+## Contributors
+
+We are open to any contributions and feed backs.
 
 To build the library, run:
 
@@ -26,39 +169,6 @@ ng build ngx-toastr-notifier
 
 This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
 
-### Publishing the Library
+### Keywords
 
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/ngx-toastr-notifier
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[ngx-toastr-notifier](https://www.npmjs.com/package/ngx-toastr-notifier)

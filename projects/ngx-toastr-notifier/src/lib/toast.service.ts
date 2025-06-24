@@ -16,9 +16,7 @@ export class ToastService {
 
     // default = info
     private readonly defaultConfig: MatSnackBarConfig<ToastData> = {
-        duration: 5000,
-        horizontalPosition: 'right',
-        verticalPosition: 'top',
+        ...this.commonConfig,
         data: { type: 'info', message: '', showClose: true }
     };
 
