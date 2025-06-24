@@ -1,6 +1,6 @@
 # ngx-toastr-notifier
 
-![success](/documentaion-assets/success2.png)
+![success2.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success2.png?raw=true)
 
 ------
 
@@ -53,7 +53,9 @@ export class DemoComponent {
 }
 ```
 
-![success](/documentaion-assets/success2.png)
+![success2.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success2.png?raw=true)
+
+
 
 
 
@@ -67,12 +69,14 @@ export class DemoComponent {
   constructor(private toastr: ToastService) {}
 
   showSuccess() {
-    this.toastr.info('Hello world!', 'Toastr fun!');
+    this.toastr.info('We are open today from 10 to 22', 'Information');
   }
 }
 ```
 
-![success](/documentaion-assets/info.png)
+![info.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/info.png?raw=true)
+
+
 
 
 
@@ -86,12 +90,14 @@ export class DemoComponent {
   constructor(private toastr: ToastService) {}
 
   showSuccess() {
-    this.toastr.error('Hello world!', 'Toastr fun!');
+    this.toastr.error("Yo're not authorized", 'Error');
   }
 }
 ```
 
-![success](/documentaion-assets/error.png)
+![error.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/error.png?raw=true)
+
+
 
 
 
@@ -105,12 +111,14 @@ export class DemoComponent {
   constructor(private toastr: ToastService) {}
 
   showSuccess() {
-    this.toastr.warning('Hello world!', 'Toastr fun!');
+    this.toastr.warning("You're Computer is overheated", "Warning");
   }
 }
 ```
 
-![success](/documentaion-assets/warning.png)
+![warning.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/warning.png?raw=true)
+
+
 
 
 
@@ -151,7 +159,9 @@ export class DemoComponent {
 }
 ```
 
-![success](/documentaion-assets/success.png)
+![success.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success.png?raw=true)
+
+
 
 ## License
 

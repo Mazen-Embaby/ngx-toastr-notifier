@@ -9,11 +9,6 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Mazen-Embaby/ngx-toastr-notifier.git"
-  },
-  "homepage": "https://github.com/Mazen-Embaby/ngx-toastr-notifier.git",
   "private": true,
   "dependencies": {
     "@angular/common": "^20.0.0",
