@@ -1,16 +1,6 @@
 # NgxToast
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
 
 ## Code scaffolding
 
@@ -28,13 +18,28 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+To build the library, run:
 
 ```bash
-ng build
+ng build ngx-toastr-notifier
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+
+### Publishing the Library
+
+Once the project is built, you can publish your library by following these steps:
+
+1. Navigate to the `dist` directory:
+
+   ```bash
+   cd dist/ngx-toastr-notifier
+   ```
+
+2. Run the `npm publish` command to publish your library to the npm registry:
+   ```bash
+   npm publish
+   ```
 
 ## Running unit tests
 
@@ -57,10 +62,3 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-ng build ngx-toastr-notifier --configuration development
-ng test ngx-toastr-notifier
-ng lint ngx-toastr-notifier
-
-pnpm add /dist/ngx-toastr-notifier
-pnpm link ngx-toastr-notifier
