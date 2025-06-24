@@ -2,7 +2,6 @@
 import { Component, Inject, Input } from '@angular/core';
 import { MatSnackBarRef, MAT_SNACK_BAR_DATA, MatSnackBarAction, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ViewEncapsulation } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 
 export interface ToastData {
   type: 'success' | 'info' | 'warning' | 'error';
@@ -16,7 +15,7 @@ export interface ToastData {
 
 @Component({
   selector: 'app-toast',
-  imports: [MatSnackBarAction, MatIconModule],
+  imports: [MatSnackBarAction],
   templateUrl: './toast.html',
   styleUrl: './toast.scss',
   encapsulation: ViewEncapsulation.None,
