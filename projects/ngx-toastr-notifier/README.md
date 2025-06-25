@@ -2,15 +2,13 @@
 
 ![success2.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success2.png?raw=true)
 
-------
+---
 
 > **Notice:**
 > This library requires **@angular/material version 20.x** as a dependency.
 > Please ensure that you have it installed in your project before using this library.
 >
 > By utilizing Angular Material, we enhance maintainability and ensure better compatibility with future releases, particularly when relying on components like SnackBar.
-
-
 
 ## Compatibility with Angular Versions
 
@@ -19,6 +17,7 @@ Latest version available for each version of Angular
 | ngx-toastr-notifier | Angular |
 | ------------------- | ------- |
 | current             | >= 20.x |
+| ^19.0.4             | >= 19.x |
 
 ## Install
 
@@ -55,10 +54,6 @@ export class DemoComponent {
 
 ![success2.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success2.png?raw=true)
 
-
-
-
-
 **Info:**
 
 ```typescript
@@ -75,10 +70,6 @@ export class DemoComponent {
 ```
 
 ![info.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/info.png?raw=true)
-
-
-
-
 
 **Error:**
 
@@ -97,10 +88,6 @@ export class DemoComponent {
 
 ![error.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/error.png?raw=true)
 
-
-
-
-
 **Warning:**
 
 ```typescript
@@ -118,21 +105,15 @@ export class DemoComponent {
 
 ![warning.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/warning.png?raw=true)
 
-
-
-
-
 ## Options
 
-| Option             | Type                          | Default | Description                                                  |
-| ------------------ | ----------------------------- | ------- | ------------------------------------------------------------ |
+| Option             | Type                          | Default | Description                                                                            |
+| ------------------ | ----------------------------- | ------- | -------------------------------------------------------------------------------------- |
 | duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
-| showClose          | boolean                       | true    | The close button to be appeared or not                       |
-| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
-| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                   |
-| Direction          | Direction                     | rtl     | Text layout direction for the toastr                         |
-
-
+| showClose          | boolean                       | true    | The close button to be appeared or not                                                 |
+| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                                           |
+| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                                             |
+| Direction          | Direction                     | rtl     | Text layout direction for the toastr                                                   |
 
 ## Example of Usage with Options
 
@@ -161,8 +142,6 @@ export class DemoComponent {
 
 ![success.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success.png?raw=true)
 
-
-
 ## License
 
 `ngx-toastr-notifier` is available under the MIT license. See the [LICENSE](https://www.npmjs.com/package/ngx-toastr-notifier) file for more info.
@@ -174,7 +153,7 @@ We are open to any contributions and feed backs.
 To build the library, run:
 
 ```bash
-ng build ngx-toastr-notifier
+npx @angular/cli@20 build ngx-toastr-notifier
 ```
 
 This command will compile your project, and the build artifacts will be placed in the `dist/` directory.

@@ -28,10 +28,7 @@ importers:
         version: 20.0.4(@angular/common@20.0.4(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.0.4(@angular/common@20.0.4(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.0.4(@angular/compiler@20.0.4)(rxjs@7.8.2)(zone.js@0.15.1)))(rxjs@7.8.2)
       ngx-toastr-notifier:
         specifier: link:/dist/ngx-toastr-notifier
-        version: link:../../../../../../dist/ngx-toastr-notifier
-      ngx-toastr-notifierss:
-        specifier: link:/dist/ngx-toastr-notifierss
-        version: link:../../../../../../dist/ngx-toastr-notifierss
+        version: link:../../../../../dist/ngx-toastr-notifier
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
