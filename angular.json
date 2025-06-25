@@ -10,7 +10,10 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular/build:ng-packagr",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-toastr-notifier/ng-package.json"
+          },
           "configurations": {
             "production": {
               "tsConfig": "projects/ngx-toastr-notifier/tsconfig.lib.prod.json"
@@ -22,19 +25,13 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-toastr-notifier/tsconfig.spec.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/ngx-toastr-notifier/**/*.ts",
-              "projects/ngx-toastr-notifier/**/*.html"
-            ],
-            "eslintConfig": "projects/ngx-toastr-notifier/eslint.config.js"
+            "tsConfig": "projects/ngx-toastr-notifier/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
@@ -51,8 +48,10 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "outputPath": "dist/demo-app",
+            "index": "projects/demo-app/src/index.html",
             "browser": "projects/demo-app/src/main.ts",
             "polyfills": [
               "zone.js"
@@ -67,7 +66,8 @@
             ],
             "styles": [
               "projects/demo-app/src/styles.scss"
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -94,7 +94,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "demo-app:build:production"
@@ -106,10 +106,10 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
               "zone.js",
@@ -125,25 +125,11 @@
             ],
             "styles": [
               "projects/demo-app/src/styles.scss"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/demo-app/**/*.ts",
-              "projects/demo-app/**/*.html"
             ],
-            "eslintConfig": "projects/demo-app/eslint.config.js"
+            "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "schematicCollections": [
-      "angular-eslint"
-    ]
   }
 }
