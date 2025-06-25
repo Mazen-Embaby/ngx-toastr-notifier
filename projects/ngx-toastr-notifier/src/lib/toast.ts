@@ -1,5 +1,5 @@
 
-import { Component, Inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
 import { MatSnackBarRef, MAT_SNACK_BAR_DATA, MatSnackBarAction, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ViewEncapsulation } from '@angular/core';
 
@@ -18,6 +18,7 @@ export interface ToastData {
   imports: [MatSnackBarAction],
   templateUrl: './toast.html',
   styleUrl: './toast.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
 export class Toast {
