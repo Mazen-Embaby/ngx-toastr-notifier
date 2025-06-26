@@ -134,7 +134,7 @@ export class DemoComponent {
     this.toastr.success('This is a toast message!', 'Toast' {
       duration: 5000,           // Duration in milliseconds
       showClose: false,         // Hide the close button
-      horizontalPosition: 'center' // Position toast to the left
+      horizontalPosition: 'center' // Position toast to the center
     });
   }
 }
