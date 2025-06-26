@@ -38,7 +38,7 @@ export class ToastService {
 
     constructor(private snackBar: MatSnackBar) { }
 
-    private show(
+    show(
         type: ToastData['type'],
         message: string,
         title?: string,

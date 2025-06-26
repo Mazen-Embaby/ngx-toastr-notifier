@@ -37,6 +37,27 @@ pnpm add ngx-toastr-notifier
 
 Toastr usage is very simple, by default it comes with four types of notification messages:
 
+**show:**
+
+```typescript
+import { Component } from '@angular/core';
+import { ToastService } from 'ngx-toastr-notifier';
+
+@Component({
+  selector: 'app-demo',
+  template: `<button (click)="showToast()">Show Toast</button>`
+})
+export class DemoComponent {
+  constructor(private toastr: ToastService) {}
+
+  showToast() {
+    this.toastr.show('success', 'This is a toast message!', 'Toast');
+  }
+}
+```
+
+![success.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success.png?raw=true)
+
 **Success:**
 
 ```typescript
@@ -109,6 +130,7 @@ export class DemoComponent {
 
 | Option             | Type                          | Default | Description                                                  |
 | ------------------ | ----------------------------- | ------- | ------------------------------------------------------------ |
+| type               | ToastType                     | info    | The type of toastr can be one of these values 'success' \| 'info' \| 'warning'  \| 'error' |
 | duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
 | showClose          | boolean                       | true    | The close button to be appeared or not                       |
 | horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
