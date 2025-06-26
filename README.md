@@ -5,7 +5,7 @@
 ---
 
 > **Notice:**
-> This library requires **@angular/material version 20.x** as a dependency.
+> This library requires **@angular/material** as a dependency.
 > Please ensure that you have it installed in your project before using this library.
 >
 > By utilizing Angular Material, we enhance maintainability and ensure better compatibility with future releases, particularly when relying on components like SnackBar.
@@ -14,10 +14,10 @@
 
 Latest version available for each version of Angular
 
-| ngx-toastr-notifier | Angular |
-| ------------------- | ------- |
-| current             | >= 20.x |
-| ^19.0.4             | >= 19.x |
+| ngx-toastr-notifier | Angular | @angular/material |
+| ------------------- | ------- | ----------------- |
+| current             | >= 20.x | >=20.x            |
+| ^19.0.4             | >= 19.x | >=19.x            |
 
 ## Install
 
@@ -27,7 +27,7 @@ Use npm:
 npm install ngx-toastr-notifier
 ```
 
-using pnpm
+Use pnpm
 
 ```bash
 pnpm add ngx-toastr-notifier
@@ -107,13 +107,13 @@ export class DemoComponent {
 
 ## Options
 
-| Option             | Type                          | Default | Description                                                                            |
-| ------------------ | ----------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| Option             | Type                          | Default | Description                                                  |
+| ------------------ | ----------------------------- | ------- | ------------------------------------------------------------ |
 | duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
-| showClose          | boolean                       | true    | The close button to be appeared or not                                                 |
-| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                                           |
-| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                                             |
-| Direction          | Direction                     | rtl     | Text layout direction for the toastr                                                   |
+| showClose          | boolean                       | true    | The close button to be appeared or not                       |
+| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
+| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                   |
+| Direction          | Direction                     | ltr     | Text layout direction for the toastr                         |
 
 ## Example of Usage with Options
 
