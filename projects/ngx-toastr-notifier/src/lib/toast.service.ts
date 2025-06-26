@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Toast, ToastData } from './toast';
 
-type ToastParameter = Partial<Pick<MatSnackBarConfig<any>, 'announcementMessage' | 'direction' | 'horizontalPosition' | 'verticalPosition' | 'duration'>>
+type ToastParameter = Partial<Pick<MatSnackBarConfig<any>, 'direction' | 'horizontalPosition' | 'verticalPosition' | 'duration'>>
     & { showClose?: boolean };
 
 @Injectable({ providedIn: 'root' })
@@ -38,7 +38,7 @@ export class ToastService {
 
     constructor(private snackBar: MatSnackBar) { }
 
-    private show(
+    show(
         type: ToastData['type'],
         message: string,
         title?: string,

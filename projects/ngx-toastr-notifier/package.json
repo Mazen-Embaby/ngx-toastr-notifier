@@ -1,12 +1,13 @@
 {
   "name": "ngx-toastr-notifier",
-  "version": "19.0.4",
+  "version": "19.0.6",
   "description": "Lightweight, customizable toast notifications for Angular 20+. A modern replacement for toastr with Angular Material design and flexible APIs.",
   "keywords": [
     "angular",
     "angular20",
     "angular21",
     "angular-toast",
+    "angular-toastr",
     "toast",
     "toastr",
     "snackbar",
