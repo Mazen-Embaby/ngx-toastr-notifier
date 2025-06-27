@@ -5,10 +5,9 @@
 ---
 
 > **Notice:**
-> This library requires **@angular/material** as a dependency.
-> Please ensure that you have it installed in your project before using this library.
->
-> By utilizing Angular Material, we enhance maintainability and ensure better compatibility with future releases, particularly when relying on components like SnackBar.
+> This library uses **@angular/material** as a dependency and install it automatically in node_modules.
+> 
+>By utilizing Angular Material, we enhance maintainability and ensure better compatibility with future releases, particularly when relying on components like SnackBar.
 
 ## Compatibility with Angular Versions
 
