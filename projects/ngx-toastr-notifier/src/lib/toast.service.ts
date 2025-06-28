@@ -3,7 +3,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Toast, ToastData } from './toast';
 
 type ToastParameter = Partial<Pick<MatSnackBarConfig<any>, 'direction' | 'horizontalPosition' | 'verticalPosition' | 'duration'>>
-    & { showClose?: boolean };
+    & { showClose?: boolean } & { progressBar?: boolean };
 
 @Injectable({ providedIn: 'root' })
 export class ToastService {
@@ -12,27 +12,28 @@ export class ToastService {
         duration: 2000,
         horizontalPosition: 'right',
         verticalPosition: 'top',
+        direction: 'ltr',
     }
 
     // default = info
     private readonly defaultConfig: MatSnackBarConfig<ToastData> = {
         ...this.commonConfig,
-        data: { type: 'info', message: '', showClose: true }
+        data: { type: 'info', message: '', showClose: true, duration: this.commonConfig.duration!, progressBar: false },
     };
 
     private readonly sucessConfig: MatSnackBarConfig<ToastData> = {
         ...this.commonConfig,
-        data: { type: 'success', message: '', showClose: true, }
+        data: { type: 'success', message: '', showClose: true, duration: this.commonConfig.duration!, progressBar: false }
     }
 
     private readonly warningConfig: MatSnackBarConfig<ToastData> = {
         ...this.commonConfig,
-        data: { type: 'warning', message: '', showClose: true }
+        data: { type: 'warning', message: '', showClose: true, duration: this.commonConfig.duration!, progressBar: false }
     }
 
     private readonly errorConfig: MatSnackBarConfig<ToastData> = {
         ...this.commonConfig,
-        data: { type: 'error', message: '', showClose: true }
+        data: { type: 'error', message: '', showClose: true, duration: this.commonConfig.duration!, progressBar: false }
     }
 
 
@@ -46,7 +47,12 @@ export class ToastService {
     ) {
 
         const data: ToastData = {
-            type, message, title, showClose: opts?.showClose ?? true,
+            type,
+            message,
+            title,
+            showClose: opts?.showClose ?? true,
+            duration: opts?.duration ?? this.commonConfig.duration!,
+            progressBar: opts?.progressBar ?? false,
         };
         const config = { ...this.defaultConfig, ...(opts ?? {}), data }; // override of default
         config.panelClass = type;

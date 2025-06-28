@@ -1,6 +1,6 @@
 # ngx-toastr-notifier
 
-![success2.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success2.png?raw=true)
+![success_progress_bar.png](https://github.com/Mazen-Embaby/ngx-toastr-notifier/blob/main/projects/ngx-toastr-notifier/documentaion-assets/success_progress_bar.png?raw=true)
 
 ---
 
@@ -132,6 +132,7 @@ export class DemoComponent {
 | type               | ToastType                     | info    | The type of toastr can be one of these values 'success' \| 'info' \| 'warning'  \| 'error' |
 | duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
 | showClose          | boolean                       | true    | The close button to be appeared or not                       |
+| progressBar        | boolean                       | false   | The progress bar to be appeared or not                       |
 | horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
 | verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                   |
 | Direction          | Direction                     | ltr     | Text layout direction for the toastr                         |
