@@ -1,0 +1,7 @@
+.progress-inner {
+  height: 6px;
+  overflow: hidden;
+  //   background: linear-gradient(to right, #666d74, #1a1b1b);
+  background: rgba(34, 33, 33, 0.514);
+  transition: width 0.3s linear; /* Smooth transition: 0.3s duration, linear timing */
+}
