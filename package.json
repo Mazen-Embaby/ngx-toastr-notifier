@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "watch:lib": "npx @angular/cli@20 build ngx-toastr-notifier --watch",
+    "build:lib": "npx @angular/cli@20 build ngx-toastr-notifier",
+    "publish:lib": "cd dist/ngx-toastr-notifier && npm publish",
     "test": "ng test",
     "lint": "ng lint"
   },
