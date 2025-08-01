@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "watch:lib": "npx @angular/cli@19 build ngx-toastr-notifier --watch",
+    "build:lib": "npx @angular/cli@19 build ngx-toastr-notifier",
     "test": "ng test"
   },
   "private": true,

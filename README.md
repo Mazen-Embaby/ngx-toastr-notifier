@@ -15,8 +15,8 @@ Latest version available for each version of Angular
 
 | ngx-toastr-notifier | Angular | @angular/material |
 | ------------------- | ------- | ----------------- |
-| current             | >= 20.x | >=20.x            |
-| ^19.0.4             | >= 19.x | >=19.x            |
+| ^20.0.8 (current)   | ^20.x   | ^20.x             |
+| ^19.0.4             | ^19.x   | ^19.x             |
 
 ## Install
 
@@ -129,15 +129,15 @@ export class DemoComponent {
 
 ## Options
 
-| Option             | Type                          | Default | Description                                                                               |
-| ------------------ | ----------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| type               | ToastType                     | info    | The type of toastr can be one of these values 'success' \| 'info' \| 'warning' \| 'error' |
-| duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr.    |
-| showClose          | boolean                       | true    | The close button to be appeared or not                                                    |
-| progressBar        | boolean                       | false   | The progress bar to be appeared or not                                                    |
-| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                                              |
-| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                                                |
-| Direction          | Direction                     | ltr     | Text layout direction for the toastr                                                      |
+| Option             | Type                          | Default | Description                                                  |
+| ------------------ | ----------------------------- | ------- | ------------------------------------------------------------ |
+| type               | ToastType                     | info    | The type of toastr can be one of these values 'success' \| 'info' \| 'warning'  \| 'error' |
+| duration           | number                        | 2000    | The length of time in milliseconds to wait before automatically dismissing the toastr. |
+| showClose          | boolean                       | true    | The close button to be appeared or not                       |
+| progressBar        | boolean                       | false   | The progress bar to be appeared or not                       |
+| horizontalPosition | MatSnackBarHorizontalPosition | right   | The horizontal position to place the toastr.                 |
+| verticalPosition   | MatSnackBarVerticalPosition   | top     | The vertical position to place the toastr.                   |
+| Direction          | Direction                     | ltr     | Text layout direction for the toastr                         |
 
 ## Example of Usage with Options
 

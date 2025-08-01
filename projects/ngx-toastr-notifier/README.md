@@ -15,8 +15,8 @@ Latest version available for each version of Angular
 
 | ngx-toastr-notifier | Angular | @angular/material |
 | ------------------- | ------- | ----------------- |
-| current             | >= 20.x | >=20.x            |
-| ^19.0.4             | >= 19.x | >=19.x            |
+| ^20.0.8 (current)   | ^20.x   | ^20.x             |
+| ^19.0.4             | ^19.x   | ^19.x             |
 
 ## Install
 
