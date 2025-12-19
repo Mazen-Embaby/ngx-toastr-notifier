@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Toast, ToastData } from './toast';
 
-type ToastParameter = Partial<Pick<MatSnackBarConfig<any>, 'direction' | 'horizontalPosition' | 'verticalPosition' | 'duration'>>
+type ToastParameter = Partial<Pick<MatSnackBarConfig<ToastData>, 'direction' | 'horizontalPosition' | 'verticalPosition' | 'duration'>>
     & { showClose?: boolean } & { progressBar?: boolean };
 
 @Injectable({ providedIn: 'root' })
 export class ToastService {
+    private snackBar = inject(MatSnackBar);
+
 
     private readonly commonConfig: Partial<MatSnackBarConfig<ToastData>> = {
         duration: 2000,
@@ -35,9 +37,6 @@ export class ToastService {
         ...this.commonConfig,
         data: { type: 'error', message: '', showClose: true, duration: this.commonConfig.duration!, progressBar: false }
     }
-
-
-    constructor(private snackBar: MatSnackBar) { }
 
     show(
         type: ToastData['type'],

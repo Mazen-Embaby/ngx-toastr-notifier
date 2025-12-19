@@ -1,15 +1,16 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef, ChangeDetectionStrategy, Input, inject } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 
 @Component({
-    selector: 'app-progress-bar',
+    selector: 'lib-progress-bar',
     templateUrl: './progress-bar.html',
     styleUrl: './_progress-bar.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressBar implements OnInit, OnDestroy {
-    constructor(private cdr: ChangeDetectorRef) { }
+    private cdr = inject(ChangeDetectorRef);
+
 
     @Input() duration = 2000; // ms, default value
     progressValue = 100;

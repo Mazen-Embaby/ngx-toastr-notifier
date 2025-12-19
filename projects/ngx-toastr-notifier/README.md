@@ -15,7 +15,8 @@ Latest version available for each version of Angular
 
 | ngx-toastr-notifier | Angular | @angular/material |
 | ------------------- | ------- | ----------------- |
-| ^20.0.8 (current)   | ^20.x   | ^20.x             |
+| ^21.0.9 (current)   | ^21.x   | ^21.x             |
+| ^20.0.8             | ^20.x   | ^20.x             |
 | ^19.0.4             | ^19.x   | ^19.x             |
 
 ## Install
@@ -175,7 +176,7 @@ We are open to any contributions and feed backs.
 To build the library, run:
 
 ```bash
-npx @angular/cli@20 build ngx-toastr-notifier
+npx @angular/cli@21 build ngx-toastr-notifier
 ```
 
 This command will compile your project, and the build artifacts will be placed in the `dist/` directory.

@@ -1,5 +1,5 @@
 
-import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatSnackBarRef, MAT_SNACK_BAR_DATA, MatSnackBarAction } from '@angular/material/snack-bar';
 import { ViewEncapsulation } from '@angular/core';
 import { ProgressBar } from "./progress-bar";
@@ -17,7 +17,7 @@ export interface ToastData {
 
 
 @Component({
-  selector: 'app-toast',
+  selector: 'lib-toast',
   imports: [MatSnackBarAction, ProgressBar],
   templateUrl: './toast.html',
   styleUrl: './toast.scss',
@@ -25,10 +25,9 @@ export interface ToastData {
   encapsulation: ViewEncapsulation.None,
 })
 export class Toast {
-  constructor(
-    public snackRef: MatSnackBarRef<Toast>,
-    @Inject(MAT_SNACK_BAR_DATA) public data: ToastData
-  ) { }
+  snackRef = inject<MatSnackBarRef<Toast>>(MatSnackBarRef);
+  data = inject<ToastData>(MAT_SNACK_BAR_DATA);
+
   dismiss() {
     this.snackRef.dismiss();
   }
